@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paper Reader</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/house.css">
+  <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+  <main id="view" class="pr-main" aria-live="polite"></main>
+
+  <aside id="dock" class="pr-dock" hidden>
+    <div class="pr-dock-head">
+      <span id="dock-title">Guide</span>
+      <button id="dock-close" class="pr-link" type="button">Hide</button>
+    </div>
+    <div id="thread" class="pr-thread"></div>
+    <form id="ask" class="pr-ask">
+      <div id="ask-context" class="pr-context" hidden>
+        <img id="ctx-thumb" alt="">
+        <span class="pr-context-text"><b id="ctx-label"></b><small id="ctx-step"></small></span>
+        <button id="ctx-toggle" class="pr-link" type="button">Don't include</button>
+      </div>
+      <textarea id="ask-text" rows="3" placeholder="Ask about anything on this screen" aria-label="Ask the guide"></textarea>
+      <div class="pr-ask-row">
+        <span id="ask-status" class="hs-label"></span>
+        <button class="hs-button" type="submit">Ask</button>
+      </div>
+    </form>
+  </aside>
+  <button id="dock-open" class="pr-dock-open hs-button" type="button" hidden>Guide</button>
+
+  <div id="lightbox" class="pr-lightbox" hidden role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+    <div class="pr-lightbox-inner">
+      <div class="pr-lightbox-bar">
+        <span class="pr-lightbox-heading"><b id="lightbox-title"></b><span id="lightbox-walked" class="pr-walked" hidden></span></span>
+        <span class="pr-lightbox-actions">
+          <button id="walk-start" class="hs-button" type="button">Walk me through it</button>
+          <button id="lightbox-guide" class="pr-link" type="button" hidden>Ask the guide</button>
+          <button id="lightbox-close" class="pr-link" type="button">Close</button>
+        </span>
+      </div>
+      <div class="wt-stage">
+        <div class="wt-canvas" id="wt-canvas">
+          <img id="lightbox-img" alt="">
+          <svg id="wt-svg" aria-hidden="true"></svg>
+        </div>
+      </div>
+      <div id="wt-panel" class="wt-panel" hidden aria-live="polite">
+        <p id="wt-count" class="hs-label"></p>
+        <h3 id="wt-title"></h3>
+        <div id="wt-text"></div>
+        <div class="wt-nav">
+          <button id="wt-back" class="hs-button is-back" type="button">Back</button>
+          <button id="wt-next" class="hs-button" type="button">Next</button>
+        </div>
+      </div>
+      <div id="lightbox-text" class="pr-lightbox-text">
+        <p id="lightbox-caption"></p>
+        <p id="lightbox-note" class="pr-note-text"></p>
+      </div>
+    </div>
+  </div>
+
+  <div id="drop" class="pr-drop" hidden><p>Drop the PDF to add it to your library</p></div>
+  <script src="/app.js" type="module"></script>
+</body>
+</html>
