@@ -29,3 +29,7 @@ The model is `gpt-6-astra` through the OpenAI Responses API. Set `OPENAI_API_KEY
 - `public/`: the app (house style)
 
 Agent definitions can't be changed once created. If you change an agent's instructions, also change its name (for example `figure-noter-v2`) and bump `NOTES_VERSION`.
+
+## License
+
+MIT. See [LICENSE](LICENSE).
