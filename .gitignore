@@ -2,3 +2,5 @@ node_modules/
 .venv/
 data/
 .env
+demo-data/
+docs/demo/build/
