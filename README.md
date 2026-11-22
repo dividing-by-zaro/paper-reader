@@ -4,11 +4,7 @@ Read research papers the way Andrew Ng suggests: in four passes, from the big pi
 
 Built on [OpenWorker](https://github.com/andrewyng/openworker).
 
-<p align="center">
-  <a href="docs/demo.mp4"><img src="docs/demo-poster.png" alt="Play the one-minute narrated demo" width="820"></a>
-  <br>
-  <a href="docs/demo.mp4"><b>Watch the one-minute demo</b></a> (narrated, with captions)
-</p>
+https://github.com/user-attachments/assets/d68e0f5b-6de9-4757-9c56-fb0b3bcdc0ed
 
 ## What it does
 
