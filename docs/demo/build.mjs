@@ -132,7 +132,7 @@ await page.waitForLoadState("load");
 await page.evaluate(() => Promise.all([...document.images].map((i) => i.decode())));
 const mp4 = join(docs, "demo.mp4");
 const ff = spawn("ffmpeg", ["-y", "-loglevel", "error", "-f", "image2pipe", "-c:v", "mjpeg", "-r", String(FPS), "-i", "pipe:0",
-  "-i", join(build, "narration.wav"), "-c:v", "libx264", "-preset", "slow", "-crf", "22", "-pix_fmt", "yuv420p", "-tune", "stillimage",
+  "-i", join(build, "narration.wav"), "-c:v", "libx264", "-preset", "slow", "-crf", "27", "-pix_fmt", "yuv420p", "-tune", "stillimage",
   "-af", "apad", "-c:a", "aac", "-b:a", "128k", "-shortest", "-movflags", "+faststart", mp4], { stdio: ["pipe", "inherit", "inherit"] });
 const frames = Math.ceil(duration * FPS);
 for (let f = 0; f < frames; f++) {
